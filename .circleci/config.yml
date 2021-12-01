@@ -1,8 +1,14 @@
-version: 2.0
+version: 2.1
+orbs:
+  node: circleci/node@4.7.0
 jobs:
   build:
-    docker:
-      - image: circleci/node:10
+    executor:
+      name: node/default
+      tag: '10.4'
     steps:
-      - run: echo "A first hello"
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
       - run: npm -v
