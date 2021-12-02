@@ -12,8 +12,8 @@ jobs:
             - "9a:a7:0b:34:da:1b:86:0b:d6:04:db:ca:f1:1d:26:21"
       - checkout
       - run:
-          name:Install
-          command:yarn install
+          name: Install
+          command: yarn install
       - run:
-          name:Build
-          command:yarn build
+          name: Build
+          command: yarn build
